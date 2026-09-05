@@ -1,0 +1,499 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>HTML Best Practices</title>
+    <!-- Use a meaningful page title -->
+
+    <meta
+      name="description"
+      content="Examples of clean, semantic and accessible HTML."
+    />
+    <!-- Describes the page -->
+
+    <link rel="icon" href="favicon.ico" />
+    <!-- Connects the favicon -->
+  </head>
+
+  <body>
+    <!-- ==================== CLEAN HTML ==================== -->
+
+    <h1>HTML Best Practices</h1>
+
+    <p>
+      Good HTML should be readable, meaningful, accessible, and easy to
+      maintain.
+    </p>
+
+    <!-- ==================== USE DOCTYPE ==================== -->
+
+    <h2>Use DOCTYPE</h2>
+
+    <p>Start an HTML5 document with:</p>
+
+    <pre>
+&lt;!DOCTYPE html&gt;
+    </pre>
+
+    <!-- ==================== USE LANG ==================== -->
+
+    <h2>Use lang</h2>
+
+    <p>
+      Define the document language using the lang attribute on the html element.
+    </p>
+
+    <pre>
+&lt;html lang="en"&gt;
+    </pre>
+
+    <!-- ==================== USE HEADINGS CORRECTLY ==================== -->
+
+    <h2>Use Headings Correctly</h2>
+
+    <!--
+        Use headings according to content structure,
+        not simply because they look bigger.
+    -->
+
+    <h3>Frontend Development</h3>
+
+    <p>Frontend development focuses on the user interface.</p>
+
+    <h3>Backend Development</h3>
+
+    <p>Backend development handles server-side logic.</p>
+
+    <!-- ==================== SEMANTIC HTML ==================== -->
+
+    <h2>Use Semantic Elements</h2>
+
+    <header>
+      <h3>My Website</h3>
+
+      <nav>
+        <a href="#home"> Home </a>
+
+        <a href="#about"> About </a>
+
+        <a href="#contact"> Contact </a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h3>Home</h3>
+
+        <p>Welcome to my website.</p>
+      </section>
+
+      <section id="about">
+        <h3>About</h3>
+
+        <p>This website contains learning resources.</p>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>Copyright &copy; 2026</p>
+    </footer>
+
+    <!-- ==================== DIV WHEN NEEDED ==================== -->
+
+    <h2>Use div for Generic Grouping</h2>
+
+    <!--
+        Use div when no more meaningful
+        semantic element is appropriate.
+    -->
+
+    <div class="card">
+      <h3>Course Card</h3>
+
+      <p>HTML Beginner Course</p>
+    </div>
+
+    <!-- ==================== MEANINGFUL CLASS NAMES ==================== -->
+
+    <h2>Meaningful Class Names</h2>
+
+    <!-- Good naming describes the purpose -->
+
+    <div class="student-card">
+      <h3>Alex</h3>
+
+      <p>HTML Student</p>
+    </div>
+
+    <!-- Avoid meaningless names such as box1 or redtext. -->
+
+    <!-- ==================== USE ALT ==================== -->
+
+    <h2>Meaningful Image alt Text</h2>
+
+    <img src="laptop.jpg" alt="Laptop displaying a code editor" width="400" />
+
+    <!--
+        Do not write unnecessary text such as:
+        alt="image"
+    -->
+
+    <!-- ==================== FORM LABELS ==================== -->
+
+    <h2>Accessible Forms</h2>
+
+    <form>
+      <label for="username"> Username: </label>
+
+      <input type="text" id="username" name="username" required />
+
+      <br /><br />
+
+      <label for="email"> Email: </label>
+
+      <input type="email" id="email" name="email" required />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== USE BUTTON ==================== -->
+
+    <h2>Button vs Link</h2>
+
+    <!--
+        Use a button for an action.
+        Use a link for navigation.
+    -->
+
+    <button type="button">Save</button>
+
+    <a href="about.html"> Open About Page </a>
+
+    <!-- ==================== VALIDATION ==================== -->
+
+    <h2>Use HTML Validation</h2>
+
+    <form>
+      <label for="age"> Age: </label>
+
+      <input type="number" id="age" name="age" min="13" max="100" required />
+
+      <br /><br />
+
+      <label for="website"> Website: </label>
+
+      <input type="url" id="website" name="website" />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== USE HTTPS ==================== -->
+
+    <h2>Use Secure Connections</h2>
+
+    <p>When linking to external websites, prefer HTTPS URLs.</p>
+
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+      Visit Example
+    </a>
+
+    <!--
+        rel="noopener noreferrer" is commonly used
+        when opening external links in a new tab.
+    -->
+
+    <!-- ==================== AVOID DEPRECATED ELEMENTS ==================== -->
+
+    <h2>Avoid Deprecated Elements</h2>
+
+    <p>Modern HTML should not rely on old presentation elements such as:</p>
+
+    <ul>
+      <li>&lt;center&gt;</li>
+
+      <li>&lt;font&gt;</li>
+
+      <li>&lt;big&gt;</li>
+
+      <li>&lt;strike&gt;</li>
+    </ul>
+
+    <p>Use CSS for presentation and styling.</p>
+
+    <!-- ==================== TABLE BEST PRACTICE ==================== -->
+
+    <h2>Table Best Practice</h2>
+
+    <table border="1">
+      <caption>
+        Student Marks
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Student</th>
+
+          <th scope="col">HTML</th>
+
+          <th scope="col">CSS</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Alex</th>
+
+          <td>85</td>
+
+          <td>90</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Sarah</th>
+
+          <td>90</td>
+
+          <td>95</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ==================== DON'T USE TABLE FOR LAYOUT ==================== -->
+
+    <h2>Do Not Use Tables for Page Layout</h2>
+
+    <p>
+      Tables are intended for tabular data. Use CSS layout techniques for page
+      design.
+    </p>
+
+    <!-- ==================== COMMENTS ==================== -->
+
+    <h2>Useful Comments</h2>
+
+    <!-- Good comment: explains why something exists -->
+
+    <p>Comments should be short and useful.</p>
+
+    <!--
+        Avoid filling the entire HTML file
+        with unnecessary comments.
+    -->
+
+    <!-- ==================== INDENTATION ==================== -->
+
+    <h2>Use Consistent Indentation</h2>
+
+    <pre>
+&lt;section&gt;
+
+    &lt;h2&gt;Courses&lt;/h2&gt;
+
+    &lt;p&gt;
+        Learn web development.
+    &lt;/p&gt;
+
+&lt;/section&gt;
+    </pre>
+
+    <!-- ==================== LOWERCASE ==================== -->
+
+    <h2>Consistent HTML Style</h2>
+
+    <p>
+      Use lowercase element and attribute names for consistent, readable HTML.
+    </p>
+
+    <pre>
+&lt;input
+    type="text"
+    id="username"
+    name="username"
+&gt;
+    </pre>
+
+    <!-- ==================== QUOTED ATTRIBUTE VALUES ==================== -->
+
+    <h2>Quote Attribute Values</h2>
+
+    <!-- Prefer quoted attribute values -->
+
+    <input type="text" id="name" name="name" />
+
+    <!-- ==================== CLOSE ELEMENTS PROPERLY ==================== -->
+
+    <h2>Proper Nesting</h2>
+
+    <!-- Correct nesting -->
+
+    <p>
+      Learn
+      <strong>HTML</strong>
+      and
+      <em>CSS</em>.
+    </p>
+
+    <!--
+        Elements should be nested correctly.
+    -->
+
+    <!-- ==================== FILE PATHS ==================== -->
+
+    <h2>Organized File Paths</h2>
+
+    <p>Keep related files in organized folders.</p>
+
+    <pre>
+project/
+│
+├── index.html
+│
+├── pages/
+│   ├── about.html
+│   └── contact.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── images/
+    └── logo.png
+    </pre>
+
+    <!-- ==================== EXTERNAL CSS ==================== -->
+
+    <h2>Separate HTML, CSS and JavaScript</h2>
+
+    <p>
+      Keep structure, styling, and behavior separate when working on larger
+      projects.
+    </p>
+
+    <pre>
+HTML  → Structure
+CSS   → Presentation
+JS    → Behavior
+    </pre>
+
+    <!-- ==================== ACCESSIBILITY ==================== -->
+
+    <h2>Accessibility</h2>
+
+    <ul>
+      <li>Use semantic HTML.</li>
+
+      <li>Use meaningful alt text.</li>
+
+      <li>Label form controls.</li>
+
+      <li>Use meaningful links and buttons.</li>
+
+      <li>Maintain logical heading structure.</li>
+
+      <li>Make interactive content keyboard accessible.</li>
+    </ul>
+
+    <!-- ==================== VALIDATE HTML ==================== -->
+
+    <h2>Validate Your HTML</h2>
+
+    <p>HTML validation can help identify syntax and structural problems.</p>
+
+    <p>Check your HTML after building a webpage, especially when learning.</p>
+
+    <!-- ==================== COMPLETE EXAMPLE ==================== -->
+
+    <h2>Complete Best-Practice Example</h2>
+
+    <article>
+      <header>
+        <h3>Learn HTML</h3>
+
+        <p>A beginner-friendly introduction to HTML.</p>
+      </header>
+
+      <section>
+        <h4>What is HTML?</h4>
+
+        <p>HTML is used to structure content on the web.</p>
+      </section>
+
+      <section>
+        <h4>What Should You Learn?</h4>
+
+        <ul>
+          <li>Document structure</li>
+
+          <li>Headings and paragraphs</li>
+
+          <li>Links and images</li>
+
+          <li>Lists and tables</li>
+
+          <li>Forms</li>
+
+          <li>Semantic HTML</li>
+
+          <li>Accessibility</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>Start practicing by creating small webpages.</p>
+      </footer>
+    </article>
+
+    <!-- ==================== FINAL CHECKLIST ==================== -->
+
+    <h2>HTML Final Checklist</h2>
+
+    <ol>
+      <li>Start with &lt;!DOCTYPE html&gt;.</li>
+
+      <li>Use a meaningful &lt;title&gt;.</li>
+
+      <li>Set the correct lang attribute.</li>
+
+      <li>Add the viewport meta tag.</li>
+
+      <li>Use semantic elements where appropriate.</li>
+
+      <li>Keep heading levels logical.</li>
+
+      <li>Use meaningful alt text.</li>
+
+      <li>Label form controls.</li>
+
+      <li>Use tables only for tabular data.</li>
+
+      <li>Use CSS instead of deprecated presentation elements.</li>
+
+      <li>Keep HTML, CSS and JavaScript organized.</li>
+
+      <li>Use readable indentation and naming.</li>
+
+      <li>Check accessibility.</li>
+
+      <li>Validate your HTML.</li>
+    </ol>
+
+    <!-- ==================== END ==================== -->
+
+    <footer>
+      <p>End of HTML Fundamentals.</p>
+    </footer>
+  </body>
+</html>

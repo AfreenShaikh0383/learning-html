@@ -1,0 +1,301 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>Audio, Video and Iframes</title>
+  </head>
+
+  <body>
+    <!-- ==================== AUDIO ==================== -->
+
+    <h1>HTML Audio, Video and Iframes</h1>
+
+    <h2>Basic Audio</h2>
+
+    <!--
+        <audio> adds audio to a webpage.
+
+        controls displays play, pause, volume, etc.
+    -->
+
+    <audio controls>
+      <source src="music.mp3" type="audio/mpeg" />
+
+      Your browser does not support audio.
+    </audio>
+
+    <!-- ==================== AUDIO ATTRIBUTES ==================== -->
+
+    <h2>Audio Attributes</h2>
+
+    <!--
+        controls = displays audio controls
+        autoplay = starts automatically
+        muted = starts without sound
+        loop = repeats the audio
+    -->
+
+    <audio controls loop>
+      <source src="music.mp3" type="audio/mpeg" />
+
+      Your browser does not support audio.
+    </audio>
+
+    <!--
+        autoplay is often restricted by browsers,
+        especially when the audio is not muted.
+    -->
+
+    <audio controls autoplay muted>
+      <source src="background.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- ==================== MULTIPLE AUDIO SOURCES ==================== -->
+
+    <h2>Multiple Audio Sources</h2>
+
+    <!--
+        Different audio formats can be provided.
+        The browser uses the first format it supports.
+    -->
+
+    <audio controls>
+      <source src="song.mp3" type="audio/mpeg" />
+
+      <source src="song.ogg" type="audio/ogg" />
+
+      Your browser does not support audio.
+    </audio>
+
+    <!-- ==================== VIDEO ==================== -->
+
+    <h2>Basic Video</h2>
+
+    <!--
+        <video> adds a video to the webpage.
+
+        controls displays video controls.
+    -->
+
+    <video controls width="500">
+      <source src="video.mp4" type="video/mp4" />
+
+      Your browser does not support video.
+    </video>
+
+    <!-- ==================== VIDEO ATTRIBUTES ==================== -->
+
+    <h2>Video Attributes</h2>
+
+    <!--
+        width  = video width
+        height = video height
+        controls = video controls
+        loop = repeats video
+        muted = starts without sound
+        poster = image displayed before video starts
+    -->
+
+    <video width="500" height="300" controls poster="video-poster.jpg">
+      <source src="video.mp4" type="video/mp4" />
+
+      Your browser does not support video.
+    </video>
+
+    <!-- ==================== VIDEO LOOP ==================== -->
+
+    <h2>Looping Video</h2>
+
+    <video controls loop muted width="500">
+      <source src="nature.mp4" type="video/mp4" />
+    </video>
+
+    <!-- ==================== MULTIPLE VIDEO SOURCES ==================== -->
+
+    <h2>Multiple Video Sources</h2>
+
+    <!--
+        The browser chooses the first supported format.
+    -->
+
+    <video controls width="500">
+      <source src="movie.mp4" type="video/mp4" />
+
+      <source src="movie.webm" type="video/webm" />
+
+      Your browser does not support video.
+    </video>
+
+    <!-- ==================== VIDEO SUBTITLES ==================== -->
+
+    <h2>Video with Subtitles</h2>
+
+    <!--
+        <track> adds subtitles, captions,
+        descriptions, or other timed text.
+    -->
+
+    <video controls width="500">
+      <source src="lesson.mp4" type="video/mp4" />
+
+      <track
+        src="subtitles-en.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="English"
+      />
+
+      Your browser does not support video.
+    </video>
+
+    <!--
+        track attributes:
+
+        src      = subtitle file
+        kind     = type of text track
+        srclang  = language
+        label    = name shown to the user
+    -->
+
+    <!-- ==================== IFRAME ==================== -->
+
+    <h2>Iframe</h2>
+
+    <!--
+        <iframe> embeds another webpage
+        or supported external content.
+    -->
+
+    <iframe
+      src="https://example.com"
+      width="600"
+      height="300"
+      title="Example website"
+    >
+    </iframe>
+
+    <!--
+        title is important for accessibility
+        because it describes the iframe.
+    -->
+
+    <!-- ==================== IFRAME WITH VIDEO ==================== -->
+
+    <h2>Embedded Video</h2>
+
+    <!--
+        Video platforms can provide an embed iframe.
+        Replace the URL with the embed URL supplied
+        by the platform.
+    -->
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/VIDEO_ID"
+      title="Embedded video"
+      allowfullscreen
+    >
+    </iframe>
+
+    <!--
+        allowfullscreen allows the embedded content
+        to use fullscreen mode when supported.
+    -->
+
+    <!-- ==================== IFRAME ATTRIBUTES ==================== -->
+
+    <h2>Iframe Attributes</h2>
+
+    <iframe
+      src="page.html"
+      width="500"
+      height="250"
+      title="Embedded webpage"
+      loading="lazy"
+    >
+    </iframe>
+
+    <!--
+        loading="lazy" can delay loading
+        of the iframe until it is needed.
+    -->
+
+    <!-- ==================== EMBED ==================== -->
+
+    <h2>Embed</h2>
+
+    <!--
+        <embed> embeds external content.
+
+        The exact content depends on the
+        browser and file format.
+    -->
+
+    <embed src="document.pdf" type="application/pdf" width="600" height="400" />
+
+    <!-- ==================== OBJECT ==================== -->
+
+    <h2>Object</h2>
+
+    <!--
+        <object> can embed external resources
+        such as certain documents or media.
+    -->
+
+    <object data="document.pdf" type="application/pdf" width="600" height="400">
+      <p>Your browser cannot display this PDF.</p>
+    </object>
+
+    <!-- ==================== AUDIO + DESCRIPTION ==================== -->
+
+    <h2>Podcast Example</h2>
+
+    <p>Listen to our latest web development podcast.</p>
+
+    <audio controls>
+      <source src="podcast.mp3" type="audio/mpeg" />
+
+      Your browser does not support audio.
+    </audio>
+
+    <!-- ==================== PRACTICAL VIDEO ==================== -->
+
+    <h2>HTML Tutorial</h2>
+
+    <p>Watch this tutorial to learn HTML basics.</p>
+
+    <video controls width="600" poster="html-course.jpg">
+      <source src="html-course.mp4" type="video/mp4" />
+
+      <track src="english.vtt" kind="subtitles" srclang="en" label="English" />
+
+      Your browser does not support video.
+    </video>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>
+      Always provide controls when users need to interact with audio or video.
+    </p>
+
+    <p>
+      Provide fallback text when possible so users know when their browser
+      cannot display the content.
+    </p>
+
+    <p>
+      Use captions or subtitles when appropriate to make video content more
+      accessible.
+    </p>
+  </body>
+</html>

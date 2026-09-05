@@ -1,0 +1,285 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <!-- ==================== CHARACTER ENCODING ==================== -->
+
+    <meta charset="UTF-8" />
+    <!-- Defines the character encoding used by the webpage -->
+
+    <!-- ==================== VIEWPORT ==================== -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive on different devices -->
+
+    <!-- ==================== TITLE ==================== -->
+
+    <title>HTML Head and Meta Tags</title>
+    <!-- Text displayed in the browser tab -->
+
+    <!-- ==================== DESCRIPTION ==================== -->
+
+    <meta
+      name="description"
+      content="Learn about HTML head elements, meta tags, viewport, favicon and webpage metadata."
+    />
+    <!-- Describes the webpage -->
+
+    <!-- ==================== AUTHOR ==================== -->
+
+    <meta name="author" content="Web Development Student" />
+    <!-- Identifies the author of the page -->
+
+    <!-- ==================== KEYWORDS ==================== -->
+
+    <meta name="keywords" content="HTML, CSS, JavaScript, web development" />
+    <!-- Describes page topics; modern search engines generally do not rely on this -->
+
+    <!-- ==================== ROBOTS ==================== -->
+
+    <meta name="robots" content="index, follow" />
+    <!-- Gives instructions to search engine crawlers -->
+
+    <!-- ==================== THEME COLOR ==================== -->
+
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Suggests a browser UI color on supported devices -->
+
+    <!-- ==================== FAVICON ==================== -->
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Small icon displayed near the page title/browser tab -->
+  </head>
+
+  <body>
+    <!-- ==================== BASIC CONTENT ==================== -->
+
+    <h1>HTML Head and Meta Tags</h1>
+
+    <p>
+      The head section contains information about the webpage that is not
+      normally displayed as page content.
+    </p>
+
+    <!-- ==================== TITLE ==================== -->
+
+    <h2>Page Title</h2>
+
+    <p>
+      The title of this page is:
+      <strong>HTML Head and Meta Tags</strong>
+    </p>
+
+    <!-- ==================== META DESCRIPTION ==================== -->
+
+    <h2>Meta Description</h2>
+
+    <p>The description provides a short summary of the webpage.</p>
+
+    <!-- ==================== VIEWPORT ==================== -->
+
+    <h2>Viewport</h2>
+
+    <p>
+      The viewport meta tag helps the page display correctly on mobile and other
+      devices.
+    </p>
+
+    <!-- ==================== FAVICON ==================== -->
+
+    <h2>Favicon</h2>
+
+    <p>The favicon is the small icon associated with a webpage.</p>
+
+    <!-- ==================== MULTIPLE FAVICON FORMATS ==================== -->
+
+    <h2>Different Favicon Formats</h2>
+
+    <!--
+        Modern websites can provide different
+        icon formats and sizes.
+    -->
+
+    <!-- PNG favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- SVG favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!--
+        Usually these links belong in <head>.
+        They are shown here as learning examples.
+    -->
+
+    <!-- ==================== WEBPAGE LANGUAGE ==================== -->
+
+    <h2>Language</h2>
+
+    <p>
+      The language of this webpage is defined by the
+      <strong>lang</strong> attribute on the html element.
+    </p>
+
+    <!-- ==================== HEAD INFORMATION ==================== -->
+
+    <h2>Information Stored in head</h2>
+
+    <ul>
+      <li>Character encoding</li>
+
+      <li>Viewport settings</li>
+
+      <li>Page title</li>
+
+      <li>Meta description</li>
+
+      <li>Author information</li>
+
+      <li>Search engine instructions</li>
+
+      <li>Favicons</li>
+
+      <li>CSS and other external resources</li>
+    </ul>
+
+    <!-- ==================== COMPLETE HEAD EXAMPLE ==================== -->
+
+    <h2>Complete Head Example</h2>
+
+    <p>A typical HTML document may have a head similar to the following:</p>
+
+    <pre>
+&lt;head&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+
+    &lt;meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    &gt;
+
+    &lt;title&gt;My Website&lt;/title&gt;
+
+    &lt;meta
+        name="description"
+        content="My personal website"
+    &gt;
+
+    &lt;link
+        rel="icon"
+        href="favicon.ico"
+    &gt;
+
+&lt;/head&gt;
+    </pre>
+
+    <!-- ==================== META HTTP-EQUIV ==================== -->
+
+    <h2>http-equiv</h2>
+
+    <!--
+        http-equiv can provide certain HTTP-like
+        instructions through HTML.
+
+        Example:
+    -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!--
+        This example is mainly useful for understanding
+        older compatibility techniques.
+    -->
+
+    <!-- ==================== REFRESH ==================== -->
+
+    <h2>Page Refresh</h2>
+
+    <!--
+        Refresh metadata exists, but automatic redirects
+        are generally better handled by the server.
+    -->
+
+    <!--
+    <meta
+        http-equiv="refresh"
+        content="10"
+    >
+    -->
+
+    <!-- The example above is commented out intentionally. -->
+
+    <!-- ==================== SOCIAL MEDIA METADATA ==================== -->
+
+    <h2>Social Sharing Metadata</h2>
+
+    <!--
+        Open Graph metadata can provide information
+        to social platforms when a page is shared.
+    -->
+
+    <meta property="og:title" content="My Web Development Website" />
+
+    <meta
+      property="og:description"
+      content="Learning HTML, CSS and JavaScript"
+    />
+
+    <meta property="og:image" content="preview.jpg" />
+
+    <meta property="og:type" content="website" />
+
+    <!-- ==================== CANONICAL LINK ==================== -->
+
+    <h2>Canonical URL</h2>
+
+    <!--
+        A canonical link can identify the preferred URL
+        for a page when multiple URLs represent similar content.
+    -->
+
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- ==================== PRACTICAL WEBSITE ==================== -->
+
+    <h2>Website Metadata Example</h2>
+
+    <p>
+      Imagine this page is the homepage of a web development learning website.
+    </p>
+
+    <p>
+      Its metadata could describe the page, identify the author, provide a
+      favicon, and define how the page behaves on mobile devices.
+    </p>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>
+      The <strong>&lt;head&gt;</strong> section contains metadata and resource
+      information.
+    </p>
+
+    <p>
+      The <strong>&lt;body&gt;</strong> contains the visible webpage content.
+    </p>
+
+    <p>
+      The <strong>&lt;title&gt;</strong> is important for identifying the page
+      in the browser and search results.
+    </p>
+
+    <p>
+      The <strong>viewport</strong> meta tag is important for responsive
+      webpages.
+    </p>
+
+    <p>
+      A <strong>favicon</strong> provides a small icon associated with the
+      webpage.
+    </p>
+  </body>
+</html>

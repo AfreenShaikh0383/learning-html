@@ -1,0 +1,305 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>HTML Lists</title>
+  </head>
+
+  <body>
+    <!-- ==================== UNORDERED LIST ==================== -->
+
+    <h1>HTML Lists</h1>
+
+    <h2>Unordered List</h2>
+
+    <!--
+        <ul> creates an unordered list.
+        <li> creates a list item.
+
+        Items normally appear with bullet points.
+    -->
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+    </ul>
+
+    <!-- ==================== UNORDERED LIST TYPES ==================== -->
+
+    <h2>Unordered List with Different Bullets</h2>
+
+    <!--
+        The type attribute can change the bullet style
+        in older HTML, but CSS is preferred for styling.
+    -->
+
+    <ul type="square">
+      <li>Frontend</li>
+      <li>Backend</li>
+      <li>Database</li>
+    </ul>
+
+    <ul type="circle">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <!-- ==================== ORDERED LIST ==================== -->
+
+    <h2>Ordered List</h2>
+
+    <!--
+        <ol> creates an ordered list.
+        Items are automatically numbered.
+    -->
+
+    <ol>
+      <li>Open VS Code</li>
+      <li>Create an HTML file</li>
+      <li>Write HTML code</li>
+      <li>Open the file in a browser</li>
+    </ol>
+
+    <!-- ==================== ORDERED LIST TYPES ==================== -->
+
+    <h2>Ordered List Types</h2>
+
+    <!-- Numbers -->
+
+    <ol type="1">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <!-- Uppercase letters -->
+
+    <ol type="A">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <!-- Lowercase letters -->
+
+    <ol type="a">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <!-- Uppercase Roman numerals -->
+
+    <ol type="I">
+      <li>Introduction</li>
+      <li>Basics</li>
+      <li>Practice</li>
+    </ol>
+
+    <!-- Lowercase Roman numerals -->
+
+    <ol type="i">
+      <li>Introduction</li>
+      <li>Basics</li>
+      <li>Practice</li>
+    </ol>
+
+    <!-- ==================== START ATTRIBUTE ==================== -->
+
+    <h2>Starting Number</h2>
+
+    <!--
+        start specifies the number where
+        the ordered list should begin.
+    -->
+
+    <ol start="5">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <!-- ==================== REVERSED LIST ==================== -->
+
+    <h2>Reversed List</h2>
+
+    <!--
+        reversed displays the ordered list
+        in descending order.
+    -->
+
+    <ol reversed>
+      <li>Third</li>
+      <li>Second</li>
+      <li>First</li>
+    </ol>
+
+    <!-- ==================== NESTED LIST ==================== -->
+
+    <h2>Nested Lists</h2>
+
+    <!--
+        A list can contain another list.
+
+        This is called a nested list.
+    -->
+
+    <ul>
+      <li>
+        Frontend Development
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+
+          <li>
+            JavaScript
+
+            <ul>
+              <li>Variables</li>
+              <li>Functions</li>
+              <li>Arrays</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Backend Development
+
+        <ul>
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>PHP</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- ==================== ORDERED + UNORDERED NESTING ==================== -->
+
+    <h2>Mixed Nested Lists</h2>
+
+    <ol>
+      <li>
+        Learn HTML
+
+        <ul>
+          <li>Headings</li>
+          <li>Paragraphs</li>
+          <li>Links</li>
+          <li>Images</li>
+        </ul>
+      </li>
+
+      <li>
+        Learn CSS
+
+        <ul>
+          <li>Selectors</li>
+          <li>Colors</li>
+          <li>Box Model</li>
+        </ul>
+      </li>
+
+      <li>
+        Learn JavaScript
+
+        <ul>
+          <li>Variables</li>
+          <li>Functions</li>
+          <li>DOM</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- ==================== DESCRIPTION LIST ==================== -->
+
+    <h2>Description List</h2>
+
+    <!--
+        <dl> = Description List
+        <dt> = Term
+        <dd> = Description
+    -->
+
+    <dl>
+      <dt>HTML</dt>
+
+      <dd>A markup language used to structure webpages.</dd>
+
+      <dt>CSS</dt>
+
+      <dd>A stylesheet language used to style webpages.</dd>
+
+      <dt>JavaScript</dt>
+
+      <dd>
+        A programming language used to add functionality and interaction to
+        webpages.
+      </dd>
+    </dl>
+
+    <!-- ==================== MULTIPLE DESCRIPTIONS ==================== -->
+
+    <h2>Multiple Descriptions</h2>
+
+    <!--
+        One term can have more than one description.
+    -->
+
+    <dl>
+      <dt>HTML</dt>
+
+      <dd>HyperText Markup Language</dd>
+
+      <dd>Used to structure web content</dd>
+
+      <dt>CSS</dt>
+
+      <dd>Cascading Style Sheets</dd>
+
+      <dd>Used to style web content</dd>
+    </dl>
+
+    <!-- ==================== PRACTICAL EXAMPLE ==================== -->
+
+    <h2>Shopping List</h2>
+
+    <ul>
+      <li>Milk</li>
+      <li>Bread</li>
+      <li>Eggs</li>
+
+      <li>
+        Fruits
+
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Orange</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Steps to Create a Website</h2>
+
+    <ol>
+      <li>Plan the webpage</li>
+      <li>Create HTML structure</li>
+      <li>Add CSS styling</li>
+      <li>Add JavaScript</li>
+      <li>Test the webpage</li>
+      <li>Deploy the website</li>
+    </ol>
+  </body>
+</html>

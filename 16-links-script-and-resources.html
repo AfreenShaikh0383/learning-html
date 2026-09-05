@@ -1,0 +1,407 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>Links, Scripts and Resources</title>
+
+    <!-- ==================== EXTERNAL CSS ==================== -->
+
+    <!--
+        <link> connects an external resource to the webpage.
+        rel="stylesheet" means the resource is a CSS stylesheet.
+    -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ==================== FAVICON ==================== -->
+
+    <link rel="icon" href="favicon.ico" />
+    <!-- Connects a favicon to the webpage -->
+
+    <!-- ==================== PRECONNECT ==================== -->
+
+    <!--
+        preconnect allows the browser to prepare
+        a connection to an external origin.
+
+        Use only when it is actually useful.
+    -->
+
+    <link rel="preconnect" href="https://example.com" />
+
+    <!-- ==================== SCRIPT IN HEAD ==================== -->
+
+    <!--
+        defer downloads the JavaScript while HTML is parsed
+        and executes it after the document has been parsed.
+    -->
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ==================== INTRODUCTION ==================== -->
+
+    <h1>Links, Scripts and External Resources</h1>
+
+    <p>
+      HTML can connect a webpage to external CSS, JavaScript, icons, and other
+      resources.
+    </p>
+
+    <!-- ==================== LINK ELEMENT ==================== -->
+
+    <h2>&lt;link&gt; Element</h2>
+
+    <p>
+      The link element is commonly used inside the head section to connect
+      external resources.
+    </p>
+
+    <pre>
+&lt;link
+    rel="stylesheet"
+    href="style.css"
+&gt;
+    </pre>
+
+    <!-- ==================== EXTERNAL CSS ==================== -->
+
+    <h2>External CSS</h2>
+
+    <p>An external CSS file can be connected using the link element.</p>
+
+    <pre>
+&lt;link
+    rel="stylesheet"
+    href="style.css"
+&gt;
+    </pre>
+
+    <!--
+        Example folder structure:
+
+        project/
+        ├── index.html
+        ├── style.css
+        └── script.js
+    -->
+
+    <!-- ==================== REL ATTRIBUTE ==================== -->
+
+    <h2>rel Attribute</h2>
+
+    <!--
+        rel describes the relationship
+        between the current document and the resource.
+    -->
+
+    <p>Example:</p>
+
+    <pre>
+rel="stylesheet"
+    </pre>
+
+    <p>This tells the browser that the linked file is a stylesheet.</p>
+
+    <!-- ==================== HREF ==================== -->
+
+    <h2>href Attribute</h2>
+
+    <p>href specifies the location of the resource.</p>
+
+    <pre>
+href="style.css"
+    </pre>
+
+    <!-- ==================== SCRIPT ==================== -->
+
+    <h2>&lt;script&gt; Element</h2>
+
+    <!--
+        <script> is used to add or load JavaScript.
+    -->
+
+    <script>
+      // This JavaScript runs when the browser reaches the script.
+      console.log("JavaScript is running.");
+    </script>
+
+    <!-- ==================== INLINE JAVASCRIPT ==================== -->
+
+    <h2>Inline JavaScript</h2>
+
+    <button type="button" onclick="alert('Hello from JavaScript!')">
+      Click Me
+    </button>
+
+    <!--
+        Inline JavaScript works,
+        but external JavaScript is usually preferred
+        for larger projects.
+    -->
+
+    <!-- ==================== EXTERNAL JAVASCRIPT ==================== -->
+
+    <h2>External JavaScript</h2>
+
+    <p>JavaScript can be stored in a separate .js file.</p>
+
+    <pre>
+&lt;script
+    src="script.js"
+&gt;&lt;/script&gt;
+    </pre>
+
+    <!-- ==================== SCRIPT AT END OF BODY ==================== -->
+
+    <h2>Script at the End of body</h2>
+
+    <!--
+        JavaScript can be placed near the end of body
+        so the HTML content is parsed first.
+    -->
+
+    <script src="script.js"></script>
+
+    <!-- ==================== DEFER ==================== -->
+
+    <h2>defer</h2>
+
+    <!--
+        defer:
+        - downloads the script while HTML is parsed
+        - executes after HTML parsing
+        - preserves script order
+    -->
+
+    <pre>
+&lt;script
+    src="script.js"
+    defer
+&gt;&lt;/script&gt;
+    </pre>
+
+    <!-- ==================== ASYNC ==================== -->
+
+    <h2>async</h2>
+
+    <!--
+        async:
+        - downloads the script while HTML is parsed
+        - executes as soon as it is ready
+        - execution order is not guaranteed
+    -->
+
+    <pre>
+&lt;script
+    src="analytics.js"
+    async
+&gt;&lt;/script&gt;
+    </pre>
+
+    <!--
+        async is useful for independent scripts
+        that do not depend on other scripts.
+    -->
+
+    <!-- ==================== DEFER VS ASYNC ==================== -->
+
+    <h2>defer vs async</h2>
+
+    <table border="1">
+      <tr>
+        <th>Feature</th>
+        <th>defer</th>
+        <th>async</th>
+      </tr>
+
+      <tr>
+        <td>Downloads during HTML parsing</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>Waits for HTML parsing</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+
+      <tr>
+        <td>Preserves script order</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+    </table>
+
+    <!-- ==================== NOSCRIPT ==================== -->
+
+    <h2>noscript</h2>
+
+    <!--
+        <noscript> provides content for users
+        whose browser does not run JavaScript.
+    -->
+
+    <noscript>
+      <p>JavaScript is disabled in your browser. Some features may not work.</p>
+    </noscript>
+
+    <!-- ==================== MODULE SCRIPT ==================== -->
+
+    <h2>JavaScript Modules</h2>
+
+    <!--
+        type="module" allows JavaScript module features
+        such as import and export.
+    -->
+
+    <pre>
+&lt;script
+    type="module"
+    src="app.js"
+&gt;&lt;/script&gt;
+    </pre>
+
+    <!-- ==================== CSS MEDIA ==================== -->
+
+    <h2>Conditional CSS</h2>
+
+    <!--
+        media can specify when a stylesheet should apply.
+    -->
+
+    <pre>
+&lt;link
+    rel="stylesheet"
+    href="print.css"
+    media="print"
+&gt;
+    </pre>
+
+    <!-- ==================== ALTERNATE STYLESHEET ==================== -->
+
+    <h2>Alternate Stylesheet</h2>
+
+    <pre>
+&lt;link
+    rel="alternate stylesheet"
+    href="dark.css"
+    title="Dark Theme"
+&gt;
+    </pre>
+
+    <!-- ==================== RESOURCE PATHS ==================== -->
+
+    <h2>Resource Paths</h2>
+
+    <p>Same folder:</p>
+
+    <pre>
+style.css
+script.js
+    </pre>
+
+    <p>Inside a folder:</p>
+
+    <pre>
+css/style.css
+js/script.js
+images/logo.png
+    </pre>
+
+    <p>Parent folder:</p>
+
+    <pre>
+../style.css
+../images/logo.png
+    </pre>
+
+    <!-- ==================== PRACTICAL PROJECT ==================== -->
+
+    <h2>Typical Web Project</h2>
+
+    <pre>
+project/
+│
+├── index.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── images/
+│   └── logo.png
+│
+└── pages/
+    ├── about.html
+    └── contact.html
+    </pre>
+
+    <!-- ==================== CONNECTING THE FILES ==================== -->
+
+    <h2>Connecting Project Files</h2>
+
+    <pre>
+&lt;link
+    rel="stylesheet"
+    href="css/style.css"
+&gt;
+
+&lt;script
+    src="js/script.js"
+    defer
+&gt;&lt;/script&gt;
+    </pre>
+
+    <!-- ==================== PRACTICAL BUTTON ==================== -->
+
+    <h2>JavaScript Example</h2>
+
+    <button id="messageButton" type="button">Show Message</button>
+
+    <script>
+      document
+        .getElementById("messageButton")
+        .addEventListener("click", function () {
+          alert("JavaScript connected successfully!");
+        });
+    </script>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>
+      Use <strong>&lt;link&gt;</strong> to connect external resources such as
+      CSS.
+    </p>
+
+    <p>Use <strong>&lt;script&gt;</strong> to add or load JavaScript.</p>
+
+    <p>
+      <strong>defer</strong> is commonly useful for external scripts that need
+      the HTML document to be parsed first.
+    </p>
+
+    <p>
+      <strong>async</strong> is useful for independent scripts where execution
+      order does not matter.
+    </p>
+
+    <p>
+      Use <strong>noscript</strong> when you want to provide fallback
+      information for users without JavaScript.
+    </p>
+  </body>
+</html>

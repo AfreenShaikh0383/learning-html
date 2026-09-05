@@ -1,0 +1,447 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>HTML Accessibility</title>
+  </head>
+
+  <body>
+    <!-- ==================== ACCESSIBILITY ==================== -->
+
+    <h1>HTML Accessibility</h1>
+
+    <p>
+      Accessibility means designing webpages so that as many people as possible
+      can use them.
+    </p>
+
+    <!-- ==================== LANGUAGE ==================== -->
+
+    <h2>Page Language</h2>
+
+    <!--
+        lang helps browsers and assistive technologies
+        understand the language of the page.
+    -->
+
+    <p>The page language is defined using:</p>
+
+    <pre>
+&lt;html lang="en"&gt;
+    </pre>
+
+    <!-- ==================== HEADING STRUCTURE ==================== -->
+
+    <h2>Heading Structure</h2>
+
+    <!--
+        Use headings to create a logical content structure.
+    -->
+
+    <h3>Frontend Development</h3>
+
+    <p>Frontend development focuses on what users see and interact with.</p>
+
+    <h3>Backend Development</h3>
+
+    <p>Backend development handles server-side processing and data.</p>
+
+    <!-- ==================== GOOD HEADING HIERARCHY ==================== -->
+
+    <h2>Good Heading Hierarchy</h2>
+
+    <h3>HTML</h3>
+
+    <h4>HTML Elements</h4>
+
+    <h4>HTML Attributes</h4>
+
+    <h3>CSS</h3>
+
+    <h4>CSS Selectors</h4>
+
+    <h4>CSS Properties</h4>
+
+    <!-- ==================== SEMANTIC HTML ==================== -->
+
+    <h2>Semantic HTML</h2>
+
+    <!--
+        Semantic elements communicate the purpose
+        of different parts of the page.
+    -->
+
+    <header>
+      <h3>My Website</h3>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+
+        <a href="#courses">Courses</a>
+
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section>
+        <h3>About the Website</h3>
+
+        <p>This website contains web development learning resources.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright &copy; 2026</p>
+    </footer>
+
+    <!-- ==================== IMAGE ALT ==================== -->
+
+    <h2>Alternative Text</h2>
+
+    <!--
+        alt describes an informative image
+        for users who cannot see it.
+    -->
+
+    <img src="student.jpg" alt="Student working on a laptop" width="300" />
+
+    <!--
+        Decorative images can use an empty alt:
+
+        alt=""
+    -->
+
+    <img src="decorative-line.png" alt="" width="300" />
+
+    <!-- ==================== ACCESSIBLE LINKS ==================== -->
+
+    <h2>Accessible Links</h2>
+
+    <!--
+        Link text should explain where the link goes.
+    -->
+
+    <p>
+      <a href="courses.html"> View Web Development Courses </a>
+    </p>
+
+    <!-- Avoid vague text such as "Click here" when possible. -->
+
+    <!-- ==================== ACCESSIBLE BUTTONS ==================== -->
+
+    <h2>Accessible Buttons</h2>
+
+    <button type="button">Save Changes</button>
+
+    <button type="button">Download Report</button>
+
+    <!--
+        Buttons should have meaningful accessible names.
+    -->
+
+    <!-- ==================== FORM LABELS ==================== -->
+
+    <h2>Accessible Form</h2>
+
+    <form>
+      <label for="full-name"> Full Name: </label>
+
+      <input type="text" id="full-name" name="full-name" />
+
+      <br /><br />
+
+      <label for="email"> Email: </label>
+
+      <input type="email" id="email" name="email" />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== LABEL CONNECTION ==================== -->
+
+    <h2>Connecting Label and Input</h2>
+
+    <!--
+        label's for value must match input's id.
+    -->
+
+    <pre>
+&lt;label for="username"&gt;
+    Username:
+&lt;/label&gt;
+
+&lt;input
+    type="text"
+    id="username"
+    name="username"
+&gt;
+    </pre>
+
+    <!-- ==================== FIELDSET + LEGEND ==================== -->
+
+    <h2>Grouping Form Controls</h2>
+
+    <form>
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+
+        <input type="radio" id="contact-email" name="contact" value="email" />
+
+        <label for="contact-email"> Email </label>
+
+        <br />
+
+        <input type="radio" id="contact-phone" name="contact" value="phone" />
+
+        <label for="contact-phone"> Phone </label>
+      </fieldset>
+    </form>
+
+    <!-- ==================== REQUIRED FORM FIELDS ==================== -->
+
+    <h2>Required Fields</h2>
+
+    <form>
+      <label for="required-email"> Email: </label>
+
+      <input
+        type="email"
+        id="required-email"
+        name="email"
+        required
+        aria-required="true"
+      />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== DESCRIBING AN INPUT ==================== -->
+
+    <h2>aria-describedby</h2>
+
+    <!--
+        aria-describedby connects an input
+        to additional descriptive text.
+    -->
+
+    <label for="password"> Password: </label>
+
+    <input
+      type="password"
+      id="password"
+      name="password"
+      aria-describedby="password-help"
+    />
+
+    <p id="password-help">Password must contain at least 8 characters.</p>
+
+    <!-- ==================== ARIA LABEL ==================== -->
+
+    <h2>aria-label</h2>
+
+    <!--
+        aria-label provides an accessible name
+        when visible text is not available.
+    -->
+
+    <button type="button" aria-label="Close dialog">X</button>
+
+    <!--
+        For ordinary buttons, visible text is usually
+        preferable to relying on aria-label.
+    -->
+
+    <!-- ==================== NAVIGATION LABEL ==================== -->
+
+    <h2>Navigation Label</h2>
+
+    <nav aria-label="Secondary navigation">
+      <a href="#resources"> Resources </a>
+
+      <a href="#practice"> Practice </a>
+    </nav>
+
+    <!-- ==================== TABLE ACCESSIBILITY ==================== -->
+
+    <h2>Accessible Table</h2>
+
+    <!--
+        Use caption and appropriate table headings
+        to make tables easier to understand.
+    -->
+
+    <table border="1">
+      <caption>
+        Student Marks
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Student</th>
+
+          <th scope="col">HTML</th>
+
+          <th scope="col">CSS</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Alex</th>
+
+          <td>85</td>
+
+          <td>90</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Sarah</th>
+
+          <td>90</td>
+
+          <td>95</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ==================== ACCESSIBLE VIDEO ==================== -->
+
+    <h2>Accessible Video</h2>
+
+    <!--
+        Captions can help users who cannot hear
+        or prefer to read the dialogue.
+    -->
+
+    <video controls width="500">
+      <source src="lesson.mp4" type="video/mp4" />
+
+      <track src="english.vtt" kind="captions" srclang="en" label="English" />
+
+      Your browser does not support video.
+    </video>
+
+    <!-- ==================== ACCESSIBLE AUDIO ==================== -->
+
+    <h2>Accessible Audio</h2>
+
+    <p>Listen to the lesson audio.</p>
+
+    <audio controls>
+      <source src="lesson.mp3" type="audio/mpeg" />
+
+      Your browser does not support audio.
+    </audio>
+
+    <!-- ==================== IFRAME ACCESSIBILITY ==================== -->
+
+    <h2>Accessible Iframe</h2>
+
+    <!--
+        An iframe should have a meaningful title.
+    -->
+
+    <iframe src="page.html" width="500" height="250" title="Course information">
+    </iframe>
+
+    <!-- ==================== HIDDEN CONTENT ==================== -->
+
+    <h2>hidden Attribute</h2>
+
+    <!--
+        hidden removes the element from normal rendering.
+    -->
+
+    <p hidden>This content is hidden.</p>
+
+    <!-- ==================== TABINDEX ==================== -->
+
+    <h2>tabindex</h2>
+
+    <!--
+        tabindex controls keyboard focus behavior.
+
+        tabindex="0" allows normal keyboard focus
+        for elements that support it or are made focusable.
+    -->
+
+    <button type="button" tabindex="0">Keyboard Focusable Button</button>
+
+    <!--
+        Avoid using positive tabindex values
+        unless there is a specific reason.
+    -->
+
+    <!-- ==================== ACCESSIBLE ARTICLE ==================== -->
+
+    <h2>Accessible Article</h2>
+
+    <article>
+      <header>
+        <h3>Learning HTML</h3>
+
+        <p>Published September 5, 2026</p>
+      </header>
+
+      <p>Semantic HTML and accessible forms help create better webpages.</p>
+
+      <footer>
+        <p>Author: Web Development Team</p>
+      </footer>
+    </article>
+
+    <!-- ==================== PRACTICAL ACCESSIBILITY CHECKLIST ==================== -->
+
+    <h2>Accessibility Checklist</h2>
+
+    <ul>
+      <li>Use a meaningful page title.</li>
+
+      <li>Use the correct heading structure.</li>
+
+      <li>Use semantic HTML elements.</li>
+
+      <li>Provide useful alt text for informative images.</li>
+
+      <li>Connect labels to form controls.</li>
+
+      <li>Use meaningful link text.</li>
+
+      <li>Give buttons meaningful names.</li>
+
+      <li>Provide captions for videos when appropriate.</li>
+
+      <li>Use table headings correctly.</li>
+
+      <li>Make sure content can be used with a keyboard.</li>
+    </ul>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>Prefer semantic HTML before adding ARIA.</p>
+
+    <p>
+      ARIA can provide additional information when native HTML does not provide
+      what is needed.
+    </p>
+
+    <p>
+      Accessibility should be considered while creating the HTML structure, not
+      added only at the end.
+    </p>
+  </body>
+</html>

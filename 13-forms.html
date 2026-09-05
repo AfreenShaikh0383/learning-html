@@ -1,0 +1,574 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>HTML Forms</title>
+  </head>
+
+  <body>
+    <!-- ==================== FORM BASICS ==================== -->
+
+    <h1>HTML Forms</h1>
+
+    <p>Forms are used to collect information from users.</p>
+
+    <!--
+        <form> contains form controls.
+
+        action = where the form data is sent
+        method = how the data is sent
+    -->
+
+    <form action="/submit" method="post">
+      <p>This is a basic form.</p>
+    </form>
+
+    <!-- ==================== LABEL + TEXT INPUT ==================== -->
+
+    <h2>Text Input</h2>
+
+    <form>
+      <!--
+            <label> describes an input.
+            for must match the input's id.
+        -->
+
+      <label for="name"> Name: </label>
+
+      <input type="text" id="name" name="name" />
+    </form>
+
+    <!-- ==================== PLACEHOLDER ==================== -->
+
+    <h2>Placeholder</h2>
+
+    <form>
+      <label for="username"> Username: </label>
+
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+      />
+    </form>
+
+    <!-- ==================== PASSWORD ==================== -->
+
+    <h2>Password Input</h2>
+
+    <form>
+      <label for="password"> Password: </label>
+
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+      />
+    </form>
+
+    <!-- ==================== EMAIL ==================== -->
+
+    <h2>Email Input</h2>
+
+    <form>
+      <label for="email"> Email: </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@email.com"
+      />
+    </form>
+
+    <!-- ==================== NUMBER ==================== -->
+
+    <h2>Number Input</h2>
+
+    <form>
+      <label for="age"> Age: </label>
+
+      <input type="number" id="age" name="age" min="1" max="100" />
+    </form>
+
+    <!-- ==================== DATE ==================== -->
+
+    <h2>Date Input</h2>
+
+    <form>
+      <label for="dob"> Date of Birth: </label>
+
+      <input type="date" id="dob" name="dob" />
+    </form>
+
+    <!-- ==================== TIME ==================== -->
+
+    <h2>Time Input</h2>
+
+    <form>
+      <label for="time"> Preferred Time: </label>
+
+      <input type="time" id="time" name="time" />
+    </form>
+
+    <!-- ==================== COLOR ==================== -->
+
+    <h2>Color Input</h2>
+
+    <form>
+      <label for="color"> Choose a color: </label>
+
+      <input type="color" id="color" name="color" />
+    </form>
+
+    <!-- ==================== RADIO BUTTONS ==================== -->
+
+    <h2>Radio Buttons</h2>
+
+    <!--
+        Radio buttons allow one option
+        from a group to be selected.
+
+        All related radio buttons should
+        have the same name.
+    -->
+
+    <form>
+      <p>Choose your course:</p>
+
+      <input type="radio" id="html" name="course" value="html" />
+
+      <label for="html"> HTML </label>
+
+      <br />
+
+      <input type="radio" id="css" name="course" value="css" />
+
+      <label for="css"> CSS </label>
+
+      <br />
+
+      <input type="radio" id="javascript" name="course" value="javascript" />
+
+      <label for="javascript"> JavaScript </label>
+    </form>
+
+    <!-- ==================== CHECKBOXES ==================== -->
+
+    <h2>Checkboxes</h2>
+
+    <!-- Checkboxes allow multiple selections -->
+
+    <form>
+      <p>Choose your skills:</p>
+
+      <input type="checkbox" id="skill-html" name="skills" value="html" />
+
+      <label for="skill-html"> HTML </label>
+
+      <br />
+
+      <input type="checkbox" id="skill-css" name="skills" value="css" />
+
+      <label for="skill-css"> CSS </label>
+
+      <br />
+
+      <input type="checkbox" id="skill-js" name="skills" value="javascript" />
+
+      <label for="skill-js"> JavaScript </label>
+    </form>
+
+    <!-- ==================== SELECT ==================== -->
+
+    <h2>Select Dropdown</h2>
+
+    <!-- <select> creates a dropdown -->
+
+    <form>
+      <label for="country"> Select Country: </label>
+
+      <select id="country" name="country">
+        <option value="india">India</option>
+
+        <option value="usa">USA</option>
+
+        <option value="uk">United Kingdom</option>
+
+        <option value="japan">Japan</option>
+      </select>
+    </form>
+
+    <!-- ==================== SELECT WITH DISABLED OPTION ==================== -->
+
+    <h2>Select with Default Option</h2>
+
+    <form>
+      <label for="language"> Select Language: </label>
+
+      <select id="language" name="language">
+        <option value="">-- Select Language --</option>
+
+        <option value="c">C</option>
+
+        <option value="cpp">C++</option>
+
+        <option value="javascript">JavaScript</option>
+
+        <option value="python">Python</option>
+      </select>
+    </form>
+
+    <!-- ==================== OPTGROUP ==================== -->
+
+    <h2>Grouped Options</h2>
+
+    <form>
+      <label for="course"> Select Course: </label>
+
+      <select id="course" name="course">
+        <optgroup label="Frontend">
+          <option value="html">HTML</option>
+
+          <option value="css">CSS</option>
+
+          <option value="javascript">JavaScript</option>
+        </optgroup>
+
+        <optgroup label="Backend">
+          <option value="node">Node.js</option>
+
+          <option value="python">Python</option>
+        </optgroup>
+      </select>
+    </form>
+
+    <!-- ==================== TEXTAREA ==================== -->
+
+    <h2>Textarea</h2>
+
+    <!-- <textarea> is used for multi-line text -->
+
+    <form>
+      <label for="message"> Message: </label>
+
+      <br />
+
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        cols="40"
+        placeholder="Write your message"
+      ></textarea>
+    </form>
+
+    <!-- ==================== FILE INPUT ==================== -->
+
+    <h2>File Upload</h2>
+
+    <form>
+      <label for="resume"> Upload File: </label>
+
+      <input type="file" id="resume" name="resume" />
+    </form>
+
+    <!-- ==================== MULTIPLE FILES ==================== -->
+
+    <h2>Multiple Files</h2>
+
+    <form>
+      <label for="documents"> Select Documents: </label>
+
+      <input type="file" id="documents" name="documents" multiple />
+    </form>
+
+    <!-- ==================== RANGE ==================== -->
+
+    <h2>Range Input</h2>
+
+    <form>
+      <label for="volume"> Volume: </label>
+
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="100"
+        value="50"
+      />
+    </form>
+
+    <!-- ==================== URL ==================== -->
+
+    <h2>URL Input</h2>
+
+    <form>
+      <label for="website"> Website: </label>
+
+      <input
+        type="url"
+        id="website"
+        name="website"
+        placeholder="https://example.com"
+      />
+    </form>
+
+    <!-- ==================== SEARCH ==================== -->
+
+    <h2>Search Input</h2>
+
+    <form>
+      <label for="search"> Search: </label>
+
+      <input
+        type="search"
+        id="search"
+        name="search"
+        placeholder="Search here"
+      />
+    </form>
+
+    <!-- ==================== TEL ==================== -->
+
+    <h2>Telephone Input</h2>
+
+    <form>
+      <label for="phone"> Phone: </label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter phone number"
+      />
+    </form>
+
+    <!-- ==================== BUTTON ==================== -->
+
+    <h2>Buttons</h2>
+
+    <form>
+      <button type="submit">Submit</button>
+
+      <button type="reset">Reset</button>
+
+      <button type="button">Normal Button</button>
+    </form>
+
+    <!-- ==================== INPUT BUTTONS ==================== -->
+
+    <h2>Input Buttons</h2>
+
+    <form>
+      <input type="submit" value="Submit Form" />
+
+      <input type="reset" value="Reset Form" />
+
+      <input type="button" value="Normal Button" />
+    </form>
+
+    <!-- ==================== FIELDSET + LEGEND ==================== -->
+
+    <h2>Fieldset and Legend</h2>
+
+    <!--
+        <fieldset> groups related form controls.
+        <legend> gives the group a title.
+    -->
+
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname"> Full Name: </label>
+
+        <input type="text" id="fullname" name="fullname" />
+
+        <br /><br />
+
+        <label for="email2"> Email: </label>
+
+        <input type="email" id="email2" name="email" />
+      </fieldset>
+    </form>
+
+    <!-- ==================== DISABLED ==================== -->
+
+    <h2>Disabled Controls</h2>
+
+    <form>
+      <label for="disabled-name"> Name: </label>
+
+      <input type="text" id="disabled-name" value="Cannot edit" disabled />
+
+      <br /><br />
+
+      <button type="button" disabled>Disabled Button</button>
+    </form>
+
+    <!-- ==================== READONLY ==================== -->
+
+    <h2>Readonly Input</h2>
+
+    <form>
+      <label for="student-id"> Student ID: </label>
+
+      <input
+        type="text"
+        id="student-id"
+        name="student-id"
+        value="STU101"
+        readonly
+      />
+    </form>
+
+    <!-- ==================== HIDDEN INPUT ==================== -->
+
+    <h2>Hidden Input</h2>
+
+    <form>
+      <!-- Hidden input is not visible to the user -->
+
+      <input type="hidden" name="user-id" value="101" />
+
+      <label for="username2"> Username: </label>
+
+      <input type="text" id="username2" name="username" />
+    </form>
+
+    <!-- ==================== COMPLETE REGISTRATION FORM ==================== -->
+
+    <h2>Complete Registration Form</h2>
+
+    <form action="/register" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="reg-name"> Full Name: </label>
+
+        <input
+          type="text"
+          id="reg-name"
+          name="name"
+          placeholder="Enter your full name"
+        />
+
+        <br /><br />
+
+        <label for="reg-email"> Email: </label>
+
+        <input
+          type="email"
+          id="reg-email"
+          name="email"
+          placeholder="Enter your email"
+        />
+
+        <br /><br />
+
+        <label for="reg-password"> Password: </label>
+
+        <input type="password" id="reg-password" name="password" />
+
+        <br /><br />
+
+        <label for="reg-age"> Age: </label>
+
+        <input type="number" id="reg-age" name="age" min="13" max="100" />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Course Information</legend>
+
+        <p>Select Course:</p>
+
+        <input type="radio" id="reg-html" name="course" value="html" />
+
+        <label for="reg-html"> HTML </label>
+
+        <br />
+
+        <input type="radio" id="reg-css" name="course" value="css" />
+
+        <label for="reg-css"> CSS </label>
+
+        <br />
+
+        <input type="radio" id="reg-js" name="course" value="javascript" />
+
+        <label for="reg-js"> JavaScript </label>
+
+        <br /><br />
+
+        <label for="reg-level"> Level: </label>
+
+        <select id="reg-level" name="level">
+          <option value="">Select Level</option>
+
+          <option value="beginner">Beginner</option>
+
+          <option value="intermediate">Intermediate</option>
+
+          <option value="advanced">Advanced</option>
+        </select>
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Message</legend>
+
+        <label for="reg-message"> Why do you want to learn? </label>
+
+        <br />
+
+        <textarea id="reg-message" name="message" rows="5" cols="40"></textarea>
+      </fieldset>
+
+      <br />
+
+      <input type="checkbox" id="terms" name="terms" value="accepted" />
+
+      <label for="terms"> I agree to the terms. </label>
+
+      <br /><br />
+
+      <button type="submit">Register</button>
+
+      <button type="reset">Clear</button>
+    </form>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>
+      Always connect a label to its input using the label's
+      <strong>for</strong> attribute and the input's <strong>id</strong>.
+    </p>
+
+    <p>
+      The <strong>name</strong> attribute identifies the form field when data is
+      submitted.
+    </p>
+
+    <p>
+      Use radio buttons when the user should select one option from a group.
+    </p>
+
+    <p>Use checkboxes when the user can select multiple options.</p>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the page responsive -->
+
+    <title>HTML Images</title>
+  </head>
+
+  <body>
+    <!-- ==================== BASIC IMAGE ==================== -->
+
+    <h1>HTML Images</h1>
+
+    <!--
+        <img> displays an image.
+
+        src    = image location
+        alt    = alternative text
+        width  = image width
+        height = image height
+    -->
+
+    <img src="image.jpg" alt="A beautiful landscape" width="400" height="250" />
+
+    <!-- ==================== IMAGE PATH ==================== -->
+
+    <h2>Image Paths</h2>
+
+    <!-- Image in the same folder -->
+
+    <img src="image.jpg" alt="Image from the same folder" width="300" />
+
+    <!--
+        Image inside a folder:
+
+        images/
+        └── nature.jpg
+
+        Use:
+
+        src="images/nature.jpg"
+    -->
+
+    <img src="images/nature.jpg" alt="Nature" width="300" />
+
+    <!--
+        ../ means go up one folder.
+
+        Example:
+
+        project/
+        ├── images/
+        │   └── nature.jpg
+        │
+        └── pages/
+            └── gallery.html
+
+        From gallery.html:
+
+        src="../images/nature.jpg"
+    -->
+
+    <img
+      src="../images/nature.jpg"
+      alt="Nature from another folder"
+      width="300"
+    />
+
+    <!-- ==================== ALT ATTRIBUTE ==================== -->
+
+    <h2>Alternative Text</h2>
+
+    <!--
+        alt describes the image.
+
+        It is useful when:
+        - The image cannot load
+        - Screen readers are being used
+    -->
+
+    <img src="mountain.jpg" alt="Snow-covered mountain" width="400" />
+
+    <!--
+        Do not use meaningless alt text such as:
+
+        alt="image"
+
+        Instead, describe what is important about the image.
+    -->
+
+    <!-- ==================== WIDTH AND HEIGHT ==================== -->
+
+    <h2>Image Size</h2>
+
+    <!-- Set both width and height -->
+
+    <img src="city.jpg" alt="City skyline" width="500" height="300" />
+
+    <!-- Only width -->
+
+    <img src="city.jpg" alt="City skyline" width="300" />
+
+    <!--
+        If only width is specified, the browser
+        normally maintains the image's aspect ratio.
+    -->
+
+    <!-- ==================== TITLE ATTRIBUTE ==================== -->
+
+    <h2>Image Title</h2>
+
+    <!--
+        title can provide additional information.
+        It may appear when the mouse is placed over the image.
+    -->
+
+    <img
+      src="coffee.jpg"
+      alt="A cup of coffee"
+      title="My morning coffee"
+      width="250"
+    />
+
+    <!-- ==================== LAZY LOADING ==================== -->
+
+    <h2>Image Loading</h2>
+
+    <!--
+        loading="lazy" tells the browser that the image
+        can be loaded when it gets closer to the screen.
+    -->
+
+    <img
+      src="large-image.jpg"
+      alt="Large landscape"
+      width="600"
+      loading="lazy"
+    />
+
+    <!-- ==================== IMAGE AS A LINK ==================== -->
+
+    <h2>Clickable Image</h2>
+
+    <!--
+        Put <img> inside <a> to make the image clickable.
+    -->
+
+    <a href="https://www.google.com" target="_blank" rel="noopener">
+      <img src="google-logo.png" alt="Visit Google" width="200" />
+    </a>
+
+    <!-- ==================== RESPONSIVE IMAGES ==================== -->
+
+    <h2>Responsive Images</h2>
+
+    <!--
+        <picture> allows different images
+        to be used for different screen sizes.
+    -->
+
+    <picture>
+      <!--
+            If the screen is 600px or smaller,
+            this image can be used.
+        -->
+
+      <source media="(max-width: 600px)" srcset="small.jpg" />
+
+      <!--
+            Default image.
+            Used when the source above does not match.
+        -->
+
+      <img src="large.jpg" alt="Landscape" width="600" />
+    </picture>
+
+    <!-- ==================== MULTIPLE SOURCES ==================== -->
+
+    <h2>Multiple Image Sources</h2>
+
+    <!--
+        More than one <source> can be used.
+        The browser chooses the first matching source.
+    -->
+
+    <picture>
+      <source media="(max-width: 500px)" srcset="mobile.jpg" />
+
+      <source media="(max-width: 900px)" srcset="tablet.jpg" />
+
+      <img src="desktop.jpg" alt="Responsive website image" width="700" />
+    </picture>
+
+    <!-- ==================== FIGURE ==================== -->
+
+    <h2>Figure and Caption</h2>
+
+    <!--
+        <figure> groups related content,
+        such as an image and its caption.
+    -->
+
+    <figure>
+      <img src="mountain.jpg" alt="Mountain covered with snow" width="400" />
+
+      <!-- Caption for the image -->
+
+      <figcaption>Snow-covered mountains during winter.</figcaption>
+    </figure>
+
+    <!-- ==================== MULTIPLE FIGURES ==================== -->
+
+    <h2>Image Gallery</h2>
+
+    <figure>
+      <img src="beach.jpg" alt="Beach with blue water" width="300" />
+
+      <figcaption>Blue water at the beach.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="forest.jpg" alt="Green forest" width="300" />
+
+      <figcaption>A green forest.</figcaption>
+    </figure>
+
+    <!-- ==================== IMAGE WITH FIGURE AND LINK ==================== -->
+
+    <h2>Clickable Figure</h2>
+
+    <figure>
+      <a href="gallery.html">
+        <img
+          src="gallery.jpg"
+          alt="View the complete photo gallery"
+          width="300"
+        />
+      </a>
+
+      <figcaption>Click the image to view the complete gallery.</figcaption>
+    </figure>
+
+    <!-- ==================== PRACTICAL EXAMPLE ==================== -->
+
+    <h2>Student Profile</h2>
+
+    <figure>
+      <img
+        src="student.jpg"
+        alt="Student working on a laptop"
+        width="300"
+        height="200"
+        loading="lazy"
+      />
+
+      <figcaption>A student learning web development.</figcaption>
+    </figure>
+
+    <!-- ==================== IMPORTANT NOTE ==================== -->
+
+    <h2>Important</h2>
+
+    <p>Always use meaningful alt text for informative images.</p>
+
+    <p>
+      Use CSS when you need advanced image sizing, positioning, borders, or
+      styling.
+    </p>
+  </body>
+</html>

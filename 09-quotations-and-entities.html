@@ -1,0 +1,300 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Allows different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>Quotations and Entities</title>
+  </head>
+
+  <body>
+    <!-- ==================== QUOTATIONS ==================== -->
+
+    <h1>Quotations and Special Characters</h1>
+
+    <h2>Blockquote</h2>
+
+    <!--
+        <blockquote> is used for a longer quotation
+        taken from another source.
+    -->
+
+    <blockquote>
+      Learning to write programs means learning to solve problems step by step.
+    </blockquote>
+
+    <!-- ==================== BLOCKQUOTE WITH CITE ==================== -->
+
+    <h2>Blockquote with Source</h2>
+
+    <!--
+        cite can contain the URL of the source.
+        It does not normally display the URL.
+    -->
+
+    <blockquote cite="https://example.com">
+      Good code should be easy to read, understand, and maintain.
+    </blockquote>
+
+    <!-- ==================== SHORT QUOTATION ==================== -->
+
+    <h2>Short Quotation</h2>
+
+    <!--
+        <q> is used for a short quotation.
+        Browsers normally add quotation marks.
+    -->
+
+    <p>
+      My teacher always says,
+      <q>Practice makes progress.</q>
+    </p>
+
+    <!-- ==================== ABBREVIATION ==================== -->
+
+    <h2>Abbreviations</h2>
+
+    <!--
+        <abbr> represents an abbreviation.
+
+        title provides the full meaning.
+    -->
+
+    <p>
+      I am learning
+      <abbr title="HyperText Markup Language">HTML</abbr>.
+    </p>
+
+    <p>
+      I am also learning
+      <abbr title="Cascading Style Sheets">CSS</abbr>.
+    </p>
+
+    <p>
+      I am studying
+      <abbr title="Master of Computer Applications">MCA</abbr>.
+    </p>
+
+    <!-- ==================== ADDRESS ==================== -->
+
+    <h2>Contact Information</h2>
+
+    <!--
+        <address> contains contact information
+        for a person, organization, or webpage.
+    -->
+
+    <address>
+      Written by Alex<br />
+      Email:
+      <a href="mailto:example@email.com"> example@email.com </a><br />
+
+      Mumbai, India
+    </address>
+
+    <!-- ==================== CITATION ==================== -->
+
+    <h2>Citation</h2>
+
+    <!--
+        <cite> is used for the title of a creative work,
+        such as a book, movie, painting, or song.
+    -->
+
+    <p>
+      I am reading
+      <cite>Learning Web Development</cite>.
+    </p>
+
+    <p>
+      My favorite artwork is
+      <cite>The Starry Night</cite>.
+    </p>
+
+    <!-- ==================== DEFINITION ==================== -->
+
+    <h2>Definition</h2>
+
+    <!--
+        <dfn> marks the term being defined.
+    -->
+
+    <p><dfn>HTML</dfn> is a markup language used to structure webpages.</p>
+
+    <!-- ==================== HTML ENTITIES ==================== -->
+
+    <h2>HTML Entities</h2>
+
+    <!--
+        Some characters have special meanings in HTML.
+
+        For example:
+
+        < starts an HTML tag
+        > ends an HTML tag
+
+        Entities allow us to display these characters
+        as normal text.
+    -->
+
+    <p>Less than: &lt;</p>
+
+    <p>Greater than: &gt;</p>
+
+    <p>Ampersand: &amp;</p>
+
+    <!-- ==================== QUOTATION MARKS ==================== -->
+
+    <h2>Quotation Marks</h2>
+
+    <p>Double quotation mark: &quot;</p>
+
+    <p>Single quotation mark: &apos;</p>
+
+    <!-- ==================== NON-BREAKING SPACE ==================== -->
+
+    <h2>Non-Breaking Space</h2>
+
+    <!--
+        &nbsp; creates a space that the browser
+        will not collapse like normal spaces.
+    -->
+
+    <p>HTML&nbsp;&nbsp;&nbsp;CSS&nbsp;&nbsp;&nbsp;JavaScript</p>
+
+    <!-- ==================== COPYRIGHT ==================== -->
+
+    <h2>Symbols</h2>
+
+    <!-- Common HTML entities -->
+
+    <p>Copyright: &copy;</p>
+
+    <p>Registered trademark: &reg;</p>
+
+    <p>Trademark: &trade;</p>
+
+    <p>Euro: &euro;</p>
+
+    <p>Pound: &pound;</p>
+
+    <p>Yen: &yen;</p>
+
+    <p>Rupee: &#8377;</p>
+
+    <!-- ==================== MATHEMATICAL SYMBOLS ==================== -->
+
+    <h2>Mathematical Symbols</h2>
+
+    <p>Plus or minus: &plusmn;</p>
+
+    <p>Multiplication: &times;</p>
+
+    <p>Division: &divide;</p>
+
+    <p>Less than or equal to: &le;</p>
+
+    <p>Greater than or equal to: &ge;</p>
+
+    <!-- ==================== ARROW SYMBOLS ==================== -->
+
+    <h2>Arrow Symbols</h2>
+
+    <p>Right arrow: &rarr;</p>
+
+    <p>Left arrow: &larr;</p>
+
+    <p>Up arrow: &uarr;</p>
+
+    <p>Down arrow: &darr;</p>
+
+    <!-- ==================== EMOJI / UNICODE ==================== -->
+
+    <h2>Unicode Characters</h2>
+
+    <!--
+        UTF-8 allows many characters to be displayed
+        directly in HTML.
+    -->
+
+    <p>Coffee: ☕</p>
+
+    <p>Star: ★</p>
+
+    <p>Heart: ♥</p>
+
+    <p>Check: ✓</p>
+
+    <!-- ==================== DECIMAL CHARACTER REFERENCE ==================== -->
+
+    <h2>Character References</h2>
+
+    <!--
+        Characters can also be written using
+        decimal Unicode values.
+
+        &#number;
+    -->
+
+    <p>Copyright: &#169;</p>
+
+    <p>Registered: &#174;</p>
+
+    <p>Rupee: &#8377;</p>
+
+    <!-- ==================== HEXADECIMAL CHARACTER REFERENCE ==================== -->
+
+    <h2>Hexadecimal Character References</h2>
+
+    <!--
+        Hexadecimal character reference:
+
+        &#xnumber;
+    -->
+
+    <p>Copyright: &#xA9;</p>
+
+    <p>Registered: &#xAE;</p>
+
+    <!-- ==================== PRACTICAL EXAMPLE ==================== -->
+
+    <h2>Course Information</h2>
+
+    <p>
+      <abbr title="HyperText Markup Language">HTML</abbr>
+      &amp;
+      <abbr title="Cascading Style Sheets">CSS</abbr>
+      are important technologies for web development.
+    </p>
+
+    <p>The course fee is &euro;100 or approximately &#8377;10,000.</p>
+
+    <p>
+      Remember:
+      <q>Keep practicing.</q>
+    </p>
+
+    <p>
+      <dfn>Web development</dfn>
+      is the process of creating websites and web applications.
+    </p>
+
+    <!-- ==================== SPECIAL HTML CHARACTERS ==================== -->
+
+    <h2>Displaying HTML Code as Text</h2>
+
+    <!--
+        To display HTML tags on the webpage,
+        use &lt; and &gt;.
+    -->
+
+    <p>To create a paragraph, write: &lt;p&gt;Hello World&lt;/p&gt;</p>
+
+    <p>To create a heading, write: &lt;h1&gt;Hello World&lt;/h1&gt;</p>
+  </body>
+</html>

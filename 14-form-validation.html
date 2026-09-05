@@ -1,0 +1,446 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>HTML Form Validation</title>
+  </head>
+
+  <body>
+    <!-- ==================== FORM VALIDATION ==================== -->
+
+    <h1>HTML Form Validation</h1>
+
+    <p>HTML provides built-in validation for many form controls.</p>
+
+    <!-- ==================== REQUIRED ==================== -->
+
+    <h2>required</h2>
+
+    <!--
+        required means the user must enter/select a value
+        before submitting the form.
+    -->
+
+    <form>
+      <label for="required-name"> Name: </label>
+
+      <input type="text" id="required-name" name="name" required />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== EMAIL VALIDATION ==================== -->
+
+    <h2>Email Validation</h2>
+
+    <!-- type="email" checks for a valid email format -->
+
+    <form>
+      <label for="valid-email"> Email: </label>
+
+      <input type="email" id="valid-email" name="email" required />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== MINLENGTH ==================== -->
+
+    <h2>minlength</h2>
+
+    <!-- Requires a minimum number of characters -->
+
+    <form>
+      <label for="username"> Username: </label>
+
+      <input type="text" id="username" name="username" minlength="5" required />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== MAXLENGTH ==================== -->
+
+    <h2>maxlength</h2>
+
+    <!-- Limits the maximum number of characters -->
+
+    <form>
+      <label for="short-message"> Message: </label>
+
+      <textarea id="short-message" name="message" maxlength="100"></textarea>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== MIN + MAX ==================== -->
+
+    <h2>min and max</h2>
+
+    <!-- Used with number and range inputs -->
+
+    <form>
+      <label for="age"> Age: </label>
+
+      <input type="number" id="age" name="age" min="13" max="100" required />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== STEP ==================== -->
+
+    <h2>step</h2>
+
+    <!--
+        step controls the allowed increments
+        for numeric inputs.
+    -->
+
+    <form>
+      <label for="price"> Price: </label>
+
+      <input
+        type="number"
+        id="price"
+        name="price"
+        min="0"
+        max="10000"
+        step="100"
+      />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== PATTERN ==================== -->
+
+    <h2>pattern</h2>
+
+    <!--
+        pattern checks text against a regular expression.
+
+        Example below:
+        Exactly 6 digits are required.
+    -->
+
+    <form>
+      <label for="pin"> PIN: </label>
+
+      <input
+        type="text"
+        id="pin"
+        name="pin"
+        pattern="[0-9]{6}"
+        title="Enter exactly 6 digits"
+        required
+      />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== URL VALIDATION ==================== -->
+
+    <h2>URL Validation</h2>
+
+    <form>
+      <label for="website"> Website: </label>
+
+      <input
+        type="url"
+        id="website"
+        name="website"
+        placeholder="https://example.com"
+        required
+      />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== DATE VALIDATION ==================== -->
+
+    <h2>Date Validation</h2>
+
+    <form>
+      <label for="appointment"> Appointment Date: </label>
+
+      <input
+        type="date"
+        id="appointment"
+        name="appointment"
+        min="2026-01-01"
+        max="2026-12-31"
+      />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== VALIDATION WITH SELECT ==================== -->
+
+    <h2>Required Select</h2>
+
+    <form>
+      <label for="course"> Choose Course: </label>
+
+      <select id="course" name="course" required>
+        <option value="">-- Select Course --</option>
+
+        <option value="html">HTML</option>
+
+        <option value="css">CSS</option>
+
+        <option value="javascript">JavaScript</option>
+      </select>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== CHECKBOX VALIDATION ==================== -->
+
+    <h2>Required Checkbox</h2>
+
+    <form>
+      <input type="checkbox" id="agreement" name="agreement" required />
+
+      <label for="agreement"> I agree to the terms. </label>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== RADIO VALIDATION ==================== -->
+
+    <h2>Required Radio Group</h2>
+
+    <form>
+      <p>Select your level:</p>
+
+      <input
+        type="radio"
+        id="beginner"
+        name="level"
+        value="beginner"
+        required
+      />
+
+      <label for="beginner"> Beginner </label>
+
+      <br />
+
+      <input type="radio" id="intermediate" name="level" value="intermediate" />
+
+      <label for="intermediate"> Intermediate </label>
+
+      <br />
+
+      <input type="radio" id="advanced" name="level" value="advanced" />
+
+      <label for="advanced"> Advanced </label>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- ==================== NOVALIDATE ==================== -->
+
+    <h2>novalidate</h2>
+
+    <!--
+        novalidate disables the browser's
+        built-in validation for that form.
+    -->
+
+    <form novalidate>
+      <label for="no-validation"> Email: </label>
+
+      <input type="email" id="no-validation" name="email" required />
+
+      <br /><br />
+
+      <button type="submit">Submit Without Browser Validation</button>
+    </form>
+
+    <!-- ==================== VALIDATION MESSAGE ==================== -->
+
+    <h2>Browser Validation Messages</h2>
+
+    <form>
+      <label for="validation-email"> Email: </label>
+
+      <input type="email" id="validation-email" name="email" required />
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p>
+      Try submitting the form without entering an email. The browser will
+      display a validation message.
+    </p>
+
+    <!-- ==================== COMPLETE VALIDATED FORM ==================== -->
+
+    <h2>Complete Registration Form</h2>
+
+    <form action="/register" method="post">
+      <fieldset>
+        <legend>Account Information</legend>
+
+        <label for="full-name"> Full Name: </label>
+
+        <input
+          type="text"
+          id="full-name"
+          name="full-name"
+          minlength="2"
+          maxlength="50"
+          required
+        />
+
+        <br /><br />
+
+        <label for="email"> Email: </label>
+
+        <input type="email" id="email" name="email" required />
+
+        <br /><br />
+
+        <label for="password"> Password: </label>
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlength="8"
+          maxlength="30"
+          required
+        />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="age2"> Age: </label>
+
+        <input type="number" id="age2" name="age" min="13" max="100" required />
+
+        <br /><br />
+
+        <label for="phone"> Phone: </label>
+
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{10}"
+          title="Enter exactly 10 digits"
+          required
+        />
+
+        <br /><br />
+
+        <label for="website2"> Website: </label>
+
+        <input
+          type="url"
+          id="website2"
+          name="website"
+          placeholder="https://example.com"
+        />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Course</legend>
+
+        <label for="course2"> Select Course: </label>
+
+        <select id="course2" name="course" required>
+          <option value="">-- Select Course --</option>
+
+          <option value="html">HTML</option>
+
+          <option value="css">CSS</option>
+
+          <option value="javascript">JavaScript</option>
+        </select>
+      </fieldset>
+
+      <br />
+
+      <input type="checkbox" id="terms" name="terms" required />
+
+      <label for="terms"> I agree to the terms. </label>
+
+      <br /><br />
+
+      <button type="submit">Register</button>
+
+      <button type="reset">Reset</button>
+    </form>
+
+    <!-- ==================== VALIDATION SUMMARY ==================== -->
+
+    <h2>Validation Attributes Summary</h2>
+
+    <ul>
+      <li><strong>required</strong> - value must be provided</li>
+
+      <li><strong>minlength</strong> - minimum text length</li>
+
+      <li><strong>maxlength</strong> - maximum text length</li>
+
+      <li><strong>min</strong> - minimum numeric/date value</li>
+
+      <li><strong>max</strong> - maximum numeric/date value</li>
+
+      <li><strong>step</strong> - allowed increments</li>
+
+      <li><strong>pattern</strong> - custom text pattern</li>
+
+      <li><strong>type</strong> - built-in input validation</li>
+
+      <li><strong>novalidate</strong> - disables browser validation</li>
+    </ul>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>HTML validation happens in the browser.</p>
+
+    <p>
+      Server-side validation is also important because browser validation can be
+      bypassed.
+    </p>
+  </body>
+</html>

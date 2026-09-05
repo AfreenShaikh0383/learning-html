@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Responsive Images</title>
+  </head>
+
+  <body>
+    <h1>Responsive Images</h1>
+
+    <p>
+      The &lt;picture&gt; element allows us to show different images depending
+      on the screen size.
+    </p>
+
+    <picture>
+      <!-- Image used on smaller screens -->
+      <source media="(max-width: 600px)" srcset="small.jpg" />
+
+      <!-- Default image -->
+      <img src="large.jpg" alt="A beautiful landscape" width="600" />
+    </picture>
+
+    <!--
+        <source> defines an alternative image.
+
+        media checks the screen size.
+
+        srcset specifies which image should be used.
+
+        <img> is the fallback image if no <source> matches.
+    -->
+  </body>
+</html>

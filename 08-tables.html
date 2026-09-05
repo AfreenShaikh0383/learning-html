@@ -1,0 +1,379 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>HTML Tables</title>
+  </head>
+
+  <body>
+    <!-- ==================== BASIC TABLE ==================== -->
+
+    <h1>HTML Tables</h1>
+
+    <!--
+        <table> creates a table.
+
+        <tr> = Table Row
+        <th> = Table Heading
+        <td> = Table Data
+    -->
+
+    <h2>Basic Table</h2>
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+      </tr>
+
+      <tr>
+        <td>Alex</td>
+        <td>20</td>
+        <td>HTML</td>
+      </tr>
+
+      <tr>
+        <td>Sarah</td>
+        <td>21</td>
+        <td>CSS</td>
+      </tr>
+
+      <tr>
+        <td>John</td>
+        <td>22</td>
+        <td>JavaScript</td>
+      </tr>
+    </table>
+
+    <!--
+        border="1" is used here only to make
+        the table easier to see while learning.
+
+        In modern websites, CSS is preferred
+        for table borders and styling.
+    -->
+
+    <!-- ==================== TABLE CAPTION ==================== -->
+
+    <h2>Table Caption</h2>
+
+    <!--
+        <caption> gives the table a title.
+        It should be placed immediately after <table>.
+    -->
+
+    <table border="1">
+      <caption>
+        Student Details
+      </caption>
+
+      <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Score</th>
+      </tr>
+
+      <tr>
+        <td>Alex</td>
+        <td>HTML</td>
+        <td>85</td>
+      </tr>
+
+      <tr>
+        <td>Sarah</td>
+        <td>CSS</td>
+        <td>90</td>
+      </tr>
+    </table>
+
+    <!-- ==================== THEAD, TBODY, TFOOT ==================== -->
+
+    <h2>Table Sections</h2>
+
+    <!--
+        <thead> = Header section
+        <tbody> = Main data
+        <tfoot> = Footer/summary section
+    -->
+
+    <table border="1">
+      <caption>
+        Student Marks
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>HTML</th>
+          <th>CSS</th>
+          <th>JavaScript</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Alex</td>
+          <td>80</td>
+          <td>85</td>
+          <td>90</td>
+        </tr>
+
+        <tr>
+          <td>Sarah</td>
+          <td>90</td>
+          <td>88</td>
+          <td>92</td>
+        </tr>
+
+        <tr>
+          <td>John</td>
+          <td>75</td>
+          <td>80</td>
+          <td>85</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th>Average</th>
+          <td>81.7</td>
+          <td>84.3</td>
+          <td>89</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- ==================== COLSPAN ==================== -->
+
+    <h2>Colspan</h2>
+
+    <!--
+        colspan makes one cell span across
+        multiple columns.
+    -->
+
+    <table border="1">
+      <tr>
+        <th colspan="3">Student Information</th>
+      </tr>
+
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+      </tr>
+
+      <tr>
+        <td>Alex</td>
+        <td>20</td>
+        <td>MCA</td>
+      </tr>
+    </table>
+
+    <!--
+        colspan="3" means this cell occupies
+        the space of 3 columns.
+    -->
+
+    <!-- ==================== ROWSPAN ==================== -->
+
+    <h2>Rowspan</h2>
+
+    <!--
+        rowspan makes one cell span across
+        multiple rows.
+    -->
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Level</th>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Alex</td>
+
+        <td>HTML</td>
+        <td>Beginner</td>
+      </tr>
+
+      <tr>
+        <td>CSS</td>
+        <td>Beginner</td>
+      </tr>
+
+      <tr>
+        <td>Sarah</td>
+        <td>JavaScript</td>
+        <td>Intermediate</td>
+      </tr>
+    </table>
+
+    <!--
+        rowspan="2" means the cell occupies
+        the space of 2 rows.
+    -->
+
+    <!-- ==================== COLSPAN + ROWSPAN ==================== -->
+
+    <h2>Colspan and Rowspan Together</h2>
+
+    <table border="1">
+      <tr>
+        <th rowspan="2">Student</th>
+
+        <th colspan="2">Marks</th>
+      </tr>
+
+      <tr>
+        <th>HTML</th>
+        <th>CSS</th>
+      </tr>
+
+      <tr>
+        <td>Alex</td>
+        <td>85</td>
+        <td>90</td>
+      </tr>
+
+      <tr>
+        <td>Sarah</td>
+        <td>90</td>
+        <td>95</td>
+      </tr>
+    </table>
+
+    <!-- ==================== TH SCOPE ==================== -->
+
+    <h2>Accessible Table</h2>
+
+    <!--
+        scope tells assistive technologies
+        what a heading applies to.
+
+        scope="col" = column heading
+        scope="row" = row heading
+    -->
+
+    <table border="1">
+      <caption>
+        Monthly Sales
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">January</th>
+          <th scope="col">February</th>
+          <th scope="col">March</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Laptop</th>
+          <td>10</td>
+          <td>15</td>
+          <td>20</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Keyboard</th>
+          <td>25</td>
+          <td>30</td>
+          <td>35</td>
+        </tr>
+
+        <tr>
+          <th scope="row">Mouse</th>
+          <td>40</td>
+          <td>45</td>
+          <td>50</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th scope="row">Total</th>
+          <td>75</td>
+          <td>90</td>
+          <td>105</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- ==================== PRACTICAL EXAMPLE ==================== -->
+
+    <h2>Employee Information</h2>
+
+    <table border="1">
+      <caption>
+        Employee Details
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Employee ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Salary</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>Alex</td>
+          <td>Development</td>
+          <td>₹40,000</td>
+        </tr>
+
+        <tr>
+          <td>102</td>
+          <td>Sarah</td>
+          <td>Design</td>
+          <td>₹35,000</td>
+        </tr>
+
+        <tr>
+          <td>103</td>
+          <td>John</td>
+          <td>Testing</td>
+          <td>₹32,000</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th colspan="3">Total Employees</th>
+
+          <td>3</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>
+      Use tables for tabular data, not for designing the layout of a webpage.
+    </p>
+
+    <p>Use &lt;th&gt; for headings and &lt;td&gt; for normal data cells.</p>
+
+    <p>
+      Use &lt;caption&gt; to describe the table and &lt;thead&gt;,
+      &lt;tbody&gt;, and &lt;tfoot&gt; to organize its structure.
+    </p>
+  </body>
+</html>

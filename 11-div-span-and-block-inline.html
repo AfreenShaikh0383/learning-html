@@ -1,0 +1,352 @@
+<!doctype html>
+<!-- HTML5 document -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Supports different characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive -->
+
+    <title>Div, Span and Block vs Inline</title>
+  </head>
+
+  <body>
+    <!-- ==================== DIV ==================== -->
+
+    <h1>Div, Span and Block vs Inline</h1>
+
+    <h2>div Element</h2>
+
+    <!--
+        <div> is a block-level container.
+        It is commonly used to group related content.
+    -->
+
+    <div>
+      <h3>Student Information</h3>
+
+      <p>Name: Alex</p>
+      <p>Course: MCA</p>
+      <p>Subject: Web Development</p>
+    </div>
+
+    <!-- ==================== MULTIPLE DIVS ==================== -->
+
+    <h2>Multiple div Elements</h2>
+
+    <!-- Each div creates a separate block -->
+
+    <div>
+      <h3>HTML</h3>
+
+      <p>HTML is used to create the structure of webpages.</p>
+    </div>
+
+    <div>
+      <h3>CSS</h3>
+
+      <p>CSS is used to style webpages.</p>
+    </div>
+
+    <div>
+      <h3>JavaScript</h3>
+
+      <p>JavaScript adds functionality and interaction.</p>
+    </div>
+
+    <!-- ==================== DIV WITH CLASS ==================== -->
+
+    <h2>div with class</h2>
+
+    <!-- class can be used to identify and style a group -->
+
+    <div class="student">
+      <h3>Student 1</h3>
+
+      <p>Learning HTML</p>
+    </div>
+
+    <div class="student">
+      <h3>Student 2</h3>
+
+      <p>Learning CSS</p>
+    </div>
+
+    <!-- ==================== DIV WITH ID ==================== -->
+
+    <h2>div with id</h2>
+
+    <!-- id identifies one specific element -->
+
+    <div id="main-content">
+      <h3>Main Content</h3>
+
+      <p>This content belongs to the main content area.</p>
+    </div>
+
+    <!-- ==================== NESTED DIV ==================== -->
+
+    <h2>Nested div Elements</h2>
+
+    <!-- A div can contain another div -->
+
+    <div class="course">
+      <h3>Web Development</h3>
+
+      <div class="frontend">
+        <h4>Frontend</h4>
+
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+      </div>
+
+      <div class="backend">
+        <h4>Backend</h4>
+
+        <p>Node.js</p>
+        <p>Python</p>
+      </div>
+    </div>
+
+    <!-- ==================== SPAN ==================== -->
+
+    <h2>span Element</h2>
+
+    <!--
+        <span> is an inline container.
+        It is commonly used for a small part of text.
+    -->
+
+    <p>I am learning <span>HTML</span>.</p>
+
+    <p>
+      I am learning
+      <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span>.
+    </p>
+
+    <!-- ==================== SPAN WITH CLASS ==================== -->
+
+    <h2>span with class</h2>
+
+    <!-- The class can later be styled using CSS -->
+
+    <p>
+      My favorite language is
+      <span class="language">JavaScript</span>.
+    </p>
+
+    <p>
+      My favorite editor is
+      <span class="editor">VS Code</span>.
+    </p>
+
+    <!-- ==================== SPAN WITH ID ==================== -->
+
+    <h2>span with id</h2>
+
+    <p>
+      Course status:
+      <span id="status">Completed</span>
+    </p>
+
+    <!-- ==================== MULTIPLE SPANS ==================== -->
+
+    <h2>Multiple span Elements</h2>
+
+    <p>
+      HTML is
+      <span>easy</span>
+      to start, CSS is used for
+      <span>styling</span>, and JavaScript adds <span>interaction</span>.
+    </p>
+
+    <!-- ==================== DIV vs SPAN ==================== -->
+
+    <h2>div vs span</h2>
+
+    <!-- div is block-level -->
+
+    <div>This is inside a div.</div>
+
+    <div>This is another div.</div>
+
+    <!-- span is inline -->
+
+    <p>
+      <span>First span</span>
+      <span>Second span</span>
+      <span>Third span</span>
+    </p>
+
+    <!-- ==================== BLOCK ELEMENTS ==================== -->
+
+    <h2>Block-Level Elements</h2>
+
+    <!--
+        Block elements normally start on a new line
+        and take the available width.
+    -->
+
+    <h3>Example</h3>
+
+    <div>Block 1</div>
+    <div>Block 2</div>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <h3>Common Block Elements</h3>
+
+    <p>
+      Examples include: div, p, h1-h6, ul, ol, li, table, form, section,
+      article, header, footer.
+    </p>
+
+    <!-- ==================== INLINE ELEMENTS ==================== -->
+
+    <h2>Inline Elements</h2>
+
+    <!--
+        Inline elements normally stay on the same line
+        when enough space is available.
+    -->
+
+    <p>
+      <span>Inline 1</span>
+      <span>Inline 2</span>
+      <span>Inline 3</span>
+    </p>
+
+    <p>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </p>
+
+    <h3>Common Inline Elements</h3>
+
+    <p>
+      Examples include: span, a, strong, em, b, i, mark, small, sub, sup, img.
+    </p>
+
+    <!-- ==================== BLOCK + INLINE TOGETHER ==================== -->
+
+    <h2>Block and Inline Together</h2>
+
+    <!-- div creates the block -->
+
+    <div>
+      <p>
+        This is a paragraph with
+        <strong>important</strong>
+        and
+        <em>emphasized</em>
+        text.
+      </p>
+    </div>
+
+    <!-- ==================== SPAN INSIDE DIV ==================== -->
+
+    <h2>span inside div</h2>
+
+    <div>
+      <h3>Programming Languages</h3>
+
+      <p>
+        I am learning
+        <span> C</span>, <span>C++</span>, <span>JavaScript</span>, and
+        <span>Python</span>.
+      </p>
+    </div>
+
+    <!-- ==================== DIV INSIDE DIV ==================== -->
+
+    <h2>Building a Content Structure</h2>
+
+    <div id="website">
+      <div id="header">
+        <h3>My Website</h3>
+      </div>
+
+      <div id="content">
+        <h3>About Me</h3>
+
+        <p>I am learning web development.</p>
+      </div>
+
+      <div id="footer">
+        <p>Copyright &copy; 2026</p>
+      </div>
+    </div>
+
+    <!-- ==================== PRACTICAL PROFILE ==================== -->
+
+    <h2>Student Profile</h2>
+
+    <div class="profile">
+      <h3>Alex</h3>
+
+      <p>
+        Course:
+        <span>MCA</span>
+      </p>
+
+      <p>
+        Skill:
+        <span>HTML</span>
+      </p>
+
+      <p>
+        Status:
+        <span>Learning</span>
+      </p>
+    </div>
+
+    <!-- ==================== PRACTICAL PRODUCT ==================== -->
+
+    <h2>Product Information</h2>
+
+    <div class="product">
+      <h3>Wireless Keyboard</h3>
+
+      <p>
+        Price:
+        <span>₹1,499</span>
+      </p>
+
+      <p>
+        Availability:
+        <span>In Stock</span>
+      </p>
+
+      <p>
+        Rating:
+        <span>4.5/5</span>
+      </p>
+    </div>
+
+    <!-- ==================== IMPORTANT NOTES ==================== -->
+
+    <h2>Important Notes</h2>
+
+    <p>
+      <strong>div</strong> is mainly used to group larger blocks of content.
+    </p>
+
+    <p>
+      <strong>span</strong> is mainly used to group or identify a small part of
+      content, especially text.
+    </p>
+
+    <p>Block-level elements normally begin on a new line.</p>
+
+    <p>Inline elements normally remain within the same line.</p>
+
+    <p>
+      CSS can change how elements are displayed, so block vs inline behavior can
+      be modified with CSS.
+    </p>
+  </body>
+</html>
